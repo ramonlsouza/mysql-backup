@@ -1,0 +1,4 @@
+database_hosts[0]="localhost"
+database_names[0]="db_name"
+database_users[0]="db_user"
+database_pass[0]="db_pass"
