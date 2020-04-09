@@ -21,7 +21,7 @@ do
   db_name=${database_names[$i-1]}
   password=${database_pass[$i-1]}
 
-  mysqldump --user=$user --password=$password --host=$host $db_name | gzip > $backup_path/$db_name-$date.sql.gz 
+  mysqldump --column-statistics=0 --user=$user --password=$password --host=$host $db_name | gzip > $backup_path/$db_name-$date.sql.gz 
 done
 
 echo "Duration: $(($(date +%s)-$start))s"
